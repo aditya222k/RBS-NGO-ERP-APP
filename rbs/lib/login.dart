@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rbs/Signup.dart';
-import 'package:rbs/Submitreport.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:rbs/home.dart';
 import 'package:toast/toast.dart';
 
 class Login extends StatefulWidget {
@@ -182,7 +182,7 @@ class _LoginState extends State<Login> {
                       final user = await _auth.signInWithEmailAndPassword(
                           email: email, password: password);
                       if (user != null) {
-                        Navigator.pushNamed(context, subRep.id);
+                        Navigator.pushNamed(context, HomeScreen.id);
                         Toast.show(
                           'Logged in',
                           context,

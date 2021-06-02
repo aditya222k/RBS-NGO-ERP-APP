@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:rbs/Submitreport.dart';
+import 'package:rbs/home.dart';
 import 'package:rbs/login.dart';
 import 'package:toast/toast.dart';
 
@@ -211,7 +211,7 @@ class _signUpState extends State<signUp> {
                           await _auth.createUserWithEmailAndPassword(
                               email: email, password: password);
                       if (newUser != null) {
-                        Navigator.pushNamed(context, subRep.id);
+                        Navigator.pushNamed(context, HomeScreen.id);
                         Toast.show(
                           'Signed Up',
                           context,
